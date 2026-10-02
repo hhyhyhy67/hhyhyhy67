@@ -1,0 +1,300 @@
+/* Change these colour values to update the dark-green-and-warm-white palette. */
+:root {
+  color-scheme: light;
+  --cream: #f6f3e9;
+  --paper: #fffdf7;
+  --green: #356a4e;
+  --green-deep: #193b2e;
+  --green-pale: #e8eee6;
+  --ink: #20352d;
+  --muted: #4e5d53;
+  --line: #d5ded5;
+  --focus: #8a4b16;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+/* Adjust this value to make the page's side spacing wider or narrower. */
+.page-width {
+  width: min(100% - 3rem, 68rem);
+  margin-inline: auto;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 2;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-160%);
+  background: var(--paper);
+  color: var(--green-deep);
+  font-family: Arial, sans-serif;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 4px;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.navigation {
+  display: flex;
+  min-height: 5rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.site-name,
+.nav-links a,
+.site-footer a {
+  color: var(--green-deep);
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-name {
+  letter-spacing: 0.06em;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-links a,
+.site-footer a {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 0.25em;
+}
+
+.nav-links a:hover,
+.site-footer a:hover {
+  text-decoration-color: currentColor;
+}
+
+.welcome {
+  padding-block: clamp(5rem, 12vw, 9rem);
+}
+
+.eyebrow {
+  margin: 0 0 0.8rem;
+  color: var(--green);
+  font-family: Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 14ch;
+  margin-bottom: 1.25rem;
+  color: var(--green-deep);
+  font-size: clamp(2.75rem, 7vw, 5rem);
+  font-weight: 400;
+  line-height: 1.08;
+}
+
+h1 span {
+  color: var(--green);
+}
+
+.welcome-copy {
+  max-width: 38rem;
+  margin-bottom: 1.75rem;
+  color: var(--muted);
+  font-size: 1.2rem;
+}
+
+.text-link,
+.email-link {
+  color: var(--green-deep);
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25em;
+}
+
+.content-section {
+  display: grid;
+  grid-template-columns: minmax(12rem, 0.8fr) 1.5fr;
+  gap: 2rem;
+  padding-block: 3.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.section-heading h2,
+.contact-content h2 {
+  margin-bottom: 0;
+  color: var(--green-deep);
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.section-body > :last-child {
+  margin-bottom: 0;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-content: start;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skill-list li {
+  padding: 0.55rem 0.9rem;
+  border: 1px solid #9daf9e;
+  background: var(--green-pale);
+  color: var(--green-deep);
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.project-card {
+  min-height: 12rem;
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--green);
+  background: var(--cream);
+}
+
+.project-number {
+  margin-bottom: 0.8rem;
+  color: var(--green);
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.project-card h3 {
+  margin-bottom: 0.5rem;
+  color: var(--green-deep);
+  font-size: 1.2rem;
+}
+
+.project-card p:last-child {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.contact-section {
+  margin-top: 1rem;
+  padding-block: 3.5rem;
+  background: var(--green-pale);
+}
+
+.contact-content h2 {
+  margin-bottom: 0.8rem;
+}
+
+.contact-content > p:not(.eyebrow) {
+  margin-bottom: 0.5rem;
+  color: var(--muted);
+}
+
+.email-link {
+  overflow-wrap: anywhere;
+}
+
+.site-footer {
+  display: flex;
+  min-height: 5rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--muted);
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+}
+
+.site-footer p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 42rem) {
+  .page-width {
+    width: min(100% - 2rem, 68rem);
+  }
+
+  .navigation {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.35rem;
+    padding-block: 1rem;
+  }
+
+  .nav-links {
+    gap: 0.35rem 1rem;
+  }
+
+  .content-section {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding-block: 2.5rem;
+  }
+
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    min-height: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
